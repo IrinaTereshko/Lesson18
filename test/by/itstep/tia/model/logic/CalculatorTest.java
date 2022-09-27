@@ -70,4 +70,37 @@ public class CalculatorTest {
                     Assert.fail();
                 }
             }
+    @Test(expected =  ArithmeticException.class)
+    public void testDivByZero () {
+
+        //  arrange
+        int a = 10;
+        int b = 0;
+
+
+        // act
+        //фантомный вызов метода
+        //возвращаемое значение нигде не используется
+        int actual = Calculator.div(a, b);
+
+        // assert
+
         }
+        //тест на время выполнения функционала
+    @Test(timeout =  16)
+    public void testDivPower () {
+        //  arrange
+        int a = 15;
+        int b = 3;
+        int expected = 5;
+
+        // act
+        int actual = Calculator.div(a, b);
+
+        // assert
+        if (actual != expected) {
+            Assert.fail();
+        }
+    }
+    }
+
