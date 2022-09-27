@@ -18,7 +18,7 @@ public class CalculatorTest {
         // assert
         //if (actual != expected) {
           //  Assert.fail();
-        // 
+        //
         Assert.assertEquals(expected, actual);
         }
 
